@@ -1,0 +1,133 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='initial-scale=1.0, user-scalable=no')
+    meta(charset='utf-8')
+    title MapOurTours
+    // Our created js and css files
+    script(src='//code.jquery.com/jquery-1.10.2.js')
+    script(src='/javascripts/home.js')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/search.css')
+    // Compiled and minified CSS
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css')
+    // Compiled and minified JavaScript
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js')
+    style.
+      .parallax-container {
+      height: "90px";
+      }
+    script.
+      $(document).ready(function(){
+      $('.parallax').parallax();
+      });
+  body
+    // CREATING NAV BAR
+    nav
+      .nav-wrapper.cyan
+        a(href='/home2', style='padding-left:30px;')
+          img.circle.responsive-img(src='images/finalprojecticon1.png', alt='backpack', style='height:60px; width:60px;')
+        a.brand-logo(href='/home2', style='padding-left:30px;') MapOurTours
+        ul#nav-mobile.right.hide-on-med-and-down
+          // Modal Trigger
+          li
+            a(href='search.html') Search
+          li
+            a(href='profile.html') Profile
+          li
+            a(href='/logout') Log Out
+          // Modal Structure
+          #modal1.modal.black-text
+            .modal-content.center
+              h4 Log In
+              p Welcome back. Enter your username and password below.
+              p
+                | Don't have an account? Sign up 
+                a(href='/register')  now!
+            .modal-footer.center
+              .row
+                form.col.s12
+                  .row
+                    .input-field.col.s6
+                      input#userName.validate(placeholder='Username', type='text')
+                    .row
+                      .input-field.col.s6
+                        input#password.validate(placeholder='Password', type='password')
+              a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='#!') Log In
+    .parallax-container
+      .parallax
+        img(src='images/campus2.jpg')
+      // MISSION STATEMENT
+      p.center.flow-text.white-text(style='text-shadow: 2px 2px 8px #000;')
+        b Simplifying the process of planning a college visit
+    // SIGN UP
+    br
+    .container
+      .section
+        // Icon Section
+        .row
+          .col.s12.m4
+            .icon-block
+              // FIRST THIRD OF THE PAGE, THE PROBLEM
+              h5.center Find Your College
+              p.light
+                | MapOurTours provides an easy, accessible way to search for the
+                | colleges you want to visit.  Simply serach our map by location or college name
+                | to find the college that is the perfect match for you.  From there it is one easy
+                | step to book available campus tours.  Book more than one tour and add them to your
+                | schedule to keep track of all your busy college visits.
+          // SECOND THIRD, THE SOLUTION
+          .col.s12.m4
+            .icon-block
+              h5.center Why MapOurTours?
+              p.light
+                | MapOurTours is designed to improve the process of scheduling and
+                | booking college tours by putting all the necessary information in one
+                | place.  After signing up a user has the capability of booking any college campus
+                | tour. MapOourTours saves user's information necessary for booking a campus tour; this
+                | way the user does not have to re-enter their information every time they want to book
+                | a tour.
+                | The seacrch map keeps it easy to see what colleges are near you or near the area you are
+                | visiting.  This
+                | feature will give users the ability to schedule college tours with
+                | colleges that they hadn’t planned on visiting prior to visiting our
+                | website.  MapOurTours keeps the college tour booking process a simple, accessible, and
+                | enjoyable experience so students can get the most out of their visits.
+          // ABOUT US
+          .col.s12.m4
+            .icon-block
+              h5.center About Us
+              p.light
+                | MapOurTours was created and designed by high school students Hannah Lerner,
+                | Maddie Comtois, Maddie Dick, and Nora Mitchell.
+              p.light
+                b Hannah Lerner, MASSACHUSETTS
+              p.light
+                b Maddie Comtois, TEXAS
+              p.light
+                b Maddie Dick, CONNECTICUT
+              p.light
+                b Nora Mitchell, NEW YORK
+  // FOOTER
+  footer.page-footer.cyan
+    .container.white-text
+      .row
+        .col.l6.s12
+          // CONTACT US
+          h5.white-text Contact Us
+          ul
+            li
+              | Email: 
+              a.grey-text.text-lighten-3(href='#!') MapOurTours@gmail.com
+            li
+              | Instagram: 
+              a.grey-text.text-lighten-3(href='https://instagram.com/mapyourtour/') @MapYourTour
+            li
+              | Facebook: 
+              a.grey-text.text-lighten-3(href='#!') Map Your Tour
+            li
+              | Twitter: 
+              a.grey-text.text-lighten-3(href='https://twitter.com/MapYourTour') @MapYourTour
+    .footer-copyright
+      .container
+        | © 2015 Copyright MapOurTours
+        a.grey-text.text-lighten-4.right(href='/home2') Home

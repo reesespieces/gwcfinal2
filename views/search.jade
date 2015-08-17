@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='initial-scale=1.0, user-scalable=no')
+    meta(charset='utf-8')
+    title= username
+    // Google Maps
+    script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places')
+    // Local CSS and JS
+    script(src='/javascripts/search.js')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/search.css')
+    // JQuery
+    link(rel='stylesheet', href='//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css')
+    script(src='//code.jquery.com/jquery-1.10.2.js')
+    script(src='//code.jquery.com/ui/1.11.4/jquery-ui.js')
+    // Materialize: Compiled and minified CSS
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css')
+    // Materialize: Compiled and minified JavaScript
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js')
+  body
+    // CREATING NAV BAR
+    nav
+      .nav-wrapper.cyan
+        a(href='/home2', style='padding-left:30px;')
+          img.circle.responsive-img(src='images/finalprojecticon1.png', alt='backpack', style='height:60px; width:60px;')
+        a.brand-logo(href='/home2', style='padding-left:30px;') MapOurTours
+        ul#nav-mobile.right.hide-on-med-and-down
+          li
+            a(href='/search') Search
+          li
+            a(href='profile.html') Profile
+          li
+            a(href='/logout') Log Out
+    input#pac-input.controls(type='text', placeholder='Search Box')
+    #map-canvas(style='width:65%; float:left')
+    div(style='width:34%;float:left;')
+      #bookVisit.center
+      #bookTime
+    //
+      A DB OF  COLLEGE AVAILABILITIES (TOUR TIMES) SET UP LIKE:
+      COLLEGES = [{'NAME':'HARVARD',...,'DATES':[{DATE: '8/15/15', TIMES:[10, 11, 1]}, {'DATE':...}]}]
+      <input type="text" id="datetimepicker"/><br><br>
