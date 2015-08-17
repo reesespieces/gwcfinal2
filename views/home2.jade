@@ -26,7 +26,7 @@ html
       .nav-wrapper.cyan
         a(href='/home2', style='padding-left:30px;')
           img.circle.responsive-img(src='images/finalprojecticon1.png', alt='backpack', style='height:60px; width:60px;')
-        a.brand-logo(href='/home2', style='padding-left:30px;') MapOurTours
+        a.brand-logo(href='home2.html', style='padding-left:30px;') MapOurTours
         ul#nav-mobile.right.hide-on-med-and-down
           // Modal Trigger
           li
@@ -35,24 +35,6 @@ html
             a(href='profile.html') Profile
           li
             a(href='/logout') Log Out
-          // Modal Structure
-          #modal1.modal.black-text
-            .modal-content.center
-              h4 Log In
-              p Welcome back. Enter your username and password below.
-              p
-                | Don't have an account? Sign up 
-                a(href='/register')  now!
-            .modal-footer.center
-              .row
-                form.col.s12
-                  .row
-                    .input-field.col.s6
-                      input#userName.validate(placeholder='Username', type='text')
-                    .row
-                      .input-field.col.s6
-                        input#password.validate(placeholder='Password', type='password')
-              a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='#!') Log In
     .parallax-container
       .parallax
         img(src='images/campus2.jpg')
@@ -117,16 +99,16 @@ html
           ul
             li
               | Email: 
-              a.grey-text.text-lighten-3(href='#!') MapOurTours@gmail.com
+              a.grey-text.text-lighten-3(href='/') MapOurTours@gmail.com
             li
               | Instagram: 
-              a.grey-text.text-lighten-3(href='https://instagram.com/mapyourtour/') @MapYourTour
+              a.grey-text.text-lighten-3(href='https://instagram.com/mapourtours/') @MapOurTours
             li
               | Facebook: 
-              a.grey-text.text-lighten-3(href='#!') Map Your Tour
+              a.grey-text.text-lighten-3(href='/') Map Our Tours
             li
               | Twitter: 
-              a.grey-text.text-lighten-3(href='https://twitter.com/MapYourTour') @MapYourTour
+              a.grey-text.text-lighten-3(href='https://twitter.com/MapYourTour') @MapOurTours
     .footer-copyright
       .container
         | © 2015 Copyright MapOurTours

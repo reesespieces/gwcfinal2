@@ -6,8 +6,7 @@ html
     title Profile
     // Our created js and css files
     script(src='//code.jquery.com/jquery-1.10.2.js')
-    script(src='/javascripts/home.js')
-    link(rel='stylesheet', type='text/css', href='/stylesheets/search.css')
+    script(src='/javascripts/profile.js')
     // Compiled and minified CSS
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css')
     // Compiled and minified JavaScript
@@ -40,7 +39,15 @@ html
       <p> Hello World </p>
       </div>
     .center
-      h3 MyColleges
+      h3 My Colleges
+    #collegeList
+    //
+      <ul class="collapsible" style=float:"left; position:absolute;" data-collapsible="accordion">
+      <li>
+      <div class="collapsible-header"></div>
+      <div class="collapsible-body"></div>
+      </li>
+      </ul>
     // MY COLLEGES FIELD
     // <div style=float:"left; width:100px;">
     // width:67%
@@ -67,16 +74,16 @@ html
           ul
             li
               | Email: 
-              a.grey-text.text-lighten-3(href='#!') MapOurTours@gmail.com
+              a.grey-text.text-lighten-3(href='/') MapOurTours@gmail.com
             li
               | Instagram: 
-              a.grey-text.text-lighten-3(href='https://instagram.com/mapyourtour/') @MapYourTour
+              a.grey-text.text-lighten-3(href='https://instagram.com/mapourtours/') @MapOurTours
             li
               | Facebook: 
-              a.grey-text.text-lighten-3(href='#!') Map Your Tour
+              a.grey-text.text-lighten-3(href='/') Map Our Tours
             li
               | Twitter: 
-              a.grey-text.text-lighten-3(href='https://twitter.com/MapYourTour') @MapYourTour
+              a.grey-text.text-lighten-3(href='https://twitter.com/MapYourTour') @MapOurTours
     .footer-copyright
       .container
         | © 2015 Copyright MapOurTours

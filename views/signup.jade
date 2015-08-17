@@ -6,29 +6,17 @@ html
     title Welcome
     // Our created js and css files
     script(src='//code.jquery.com/jquery-1.10.2.js')
-    script(src='/javascripts/signup.js')
     // Compiled and minified CSS
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css')
     // Compiled and minified JavaScript
     script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js')
-  script.
-    var userlist = {}; // CREATING DICTIONARY TO STORE INPUTTED FIELDS
-    function validate(){
-    var firstName = document.getElementById("firstName").value(); //GRAB VALUE OF THE INPUT IN THE FIELD FIRST NAME
-    var lastName = document.getElementById("lastName").value(); //GRAB VALUE OF THE INPUT IN THE FIELD LAST NAME
-    console.log(firstName); //LOGGING THE VARIABLE FIRST NAME
-    console.log(lastName);
-    userlist.push({'firstName':firstName, 'lastName': lastName}); //INSERTING THE VARIABLES IN THE DICTIONARY
-    alert(userlist); //ALERT
-    }
-    validate();
   body
     // CREATING NAV BAR
     nav
       .nav-wrapper.cyan
         a(href='/home2', style='padding-left:30px;')
           img.circle.responsive-img(src='images/finalprojecticon1.png', alt='backpack', style='height:60px; width:60px;')
-        a.brand-logo(href='/home2', style='padding-left:30px;') MapOurTours
+        a.brand-logo(href='home.html', style='padding-left:30px;') MapOurTours
     .center
       h2 Sign Up
     form(action='/adduser', method='post')
@@ -43,17 +31,87 @@ html
             .input-field.col.s6
               // LAST NAME FORM
               input#last_name.validate(name='lastName', type='text')
-              label(for='lastName') Last Name
+              label(for='last_name') Last Name
           .row
             .input-field.col.s12
               // USERNAME FORM
-              input#inputUserName.validate(name='email', type='text')
-              label(for='email') Email
+              input#inputUserName.validate(name='username', type='text')
+              label(for='userName') Username
           .row
             // PASSWORD FORM
             .input-field.col.s6
               input#password.validate(name='password', type='password')
               label(for='password') Password
+            .input-field.col.s6
+              // PASSWORD VALIDATION
+              input#password.validate(name='passwordVal', type='password')
+              label(for='password') Retype Your Password
+          .row
+            .input-field.col.s12
+              input#inputUserEmail.validate(name='useremail', type='email')
+              label(for='email') Email
+          .row
+            .input-field.col.s12
+              // PHONE FORM
+              input#phone.validate(name='phone', type='text')
+              label(for='phone') Phone
+          .row
+            // BIRTHDAY
+            .input-field.col.s4
+              // MONTH FORM
+              input#month.validate(name='month', type='text')
+              label(for='month') Month
+            .input-field.col.s4
+              // DAY FORM
+              input#day.validate(name='day', type='text')
+              label(for='day') Day
+            .input-field.col.s4
+              // YEAR FORM
+              input#year.validate(name='year', type='text')
+              label(for='year') Year
+          h5 Mailing Address
+          .row
+            .input-field.col.s12
+              // STREET FORM
+              input#street.validate(name='street', type='text')
+              label(for='street') Street Name
+          .row
+            .input-field.col.s4
+              // CITY FORM
+              input#city.validate(name='city', type='text')
+              label(for='city') City
+            .input-field.col.s4
+              // STATE FORM
+              input#state.validate(name='state', type='text')
+              label(for='state') State
+            .input-field.col.s4
+              // ZIP CODE FORM
+              input#zipCode.validate(name='zipCode', type='text')
+              label(for='zipCode') Zip Code
+          h5
+            | Information for College Tours (see 
+            a(href='#') privacy policy
+            | )
+          .row
+            .input-field.col.s12
+              // HIGH SCHOOL FORM
+              input#highSchool.validate(name='hs', type='text')
+              label(for='highSchool') High School Name
+          .row
+            .input-field.col.s12
+              // HIGH SCHOOL CODE FORM
+              input#highSchoolCEEB.validate(name='hsCode', type='text')
+              label(for='highSchoolCEEB') High School Code
+          form(action='#')
+            .row
+              .col.s6
+                p
+                  input#test1(name='group1', type='radio')
+                  label(for='test1') Transfer Student
+              .col.s6
+                p
+                  input#test2(name='group1', type='radio')
+                  label(for='test2') Prospective Student
     .center
       // SUBMIT BUTTON
       button#btnSubmit.waves-effect.waves-light.btn(onclick='validate()', type='sumbit') Submit
@@ -66,20 +124,19 @@ html
           // CONTACT US
           h5.white-text Contact Us
           ul
-            // INFORMATION
             li
-              | Email:
-              a.grey-text.text-lighten-3(href='#!') MapYourTour@gmail.com
+              | Email: 
+              a.grey-text.text-lighten-3(href='/') MapOurTours@gmail.com
             li
-              | Instagram:
-              a.grey-text.text-lighten-3(href='https://instagram.com/mapyourtour/') @MapYourTour
+              | Instagram: 
+              a.grey-text.text-lighten-3(href='https://instagram.com/mapourtours/') @MapOurTours
             li
-              | Facebook:
-              a.grey-text.text-lighten-3(href='#!') Map Your Tour
+              | Facebook: 
+              a.grey-text.text-lighten-3(href='/') Map Our Tours
             li
-              | Twitter:
-              a.grey-text.text-lighten-3(href='https://twitter.com/MapYourTour') @MapYourTour
+              | Twitter: 
+              a.grey-text.text-lighten-3(href='https://twitter.com/MapYourTour') @MapOurTours
     .footer-copyright
       .container
-        | © 2015 Copyright MapYourTour
-        a.grey-text.text-lighten-4.right(href='/') Home
+        | © 2015 Copyright MapOurTours
+        a.grey-text.text-lighten-4.right(href='/home2') Home

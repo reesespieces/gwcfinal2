@@ -108,7 +108,7 @@ function drawMap() { //DRAWS THE GOOGLE MAP
           '<div id="siteNotice">'+
           '</div>'+
           '<div id="bodyContent">'+
-          '<p><b>'+ this.name +'</b>,</br> '+ this.name +' '+ this.description +
+          '<p><b>'+ this.name +'</b></br> '+ this.name +' '+ this.description +
           '</div>'+ '<a href="' + this.url + '">Visit Our Site</a>' +
           '</div>';
 
