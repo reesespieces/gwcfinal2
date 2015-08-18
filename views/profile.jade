@@ -3,7 +3,7 @@ html
   head
     meta(name='viewport', content='initial-scale=1.0, user-scalable=no')
     meta(charset='utf-8')
-    title= username
+    title= user.fullName
     // Our created js and css files
     script(src='//code.jquery.com/jquery-1.10.2.js')
     script(src='/javascripts/profile.js')
@@ -44,7 +44,7 @@ html
       br
       img(src='/images/user.png', style='width:96px; height:96px;')
       h5= user.fullName
-      p#emailText.flow-text
+      p#emailText.flow-text= user.username
       p
     div(style='width:65%;float:left;padding-left:5%;')
       br

@@ -217,5 +217,7 @@ function addItinerary() {
 
       }
     });
-    alert("You have sucessfully booked a tour! Have fun!");
+    $("#bookVisit").html('');
+    $("#bookTime").html('');
+    $("#booked").html('<h4>Success!</h4>');
 };
