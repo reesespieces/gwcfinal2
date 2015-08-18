@@ -3,7 +3,7 @@ html
   head
     meta(name='viewport', content='initial-scale=1.0, user-scalable=no')
     meta(charset='utf-8')
-    title= username
+    title Places search box
     // Google Maps
     script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places')
     // Local CSS and JS
@@ -22,19 +22,26 @@ html
     nav
       .nav-wrapper.cyan
         a(href='/home2', style='padding-left:30px;')
-          img.circle.responsive-img(src='images/finalprojecticon1.png', alt='backpack', style='height:60px; width:60px;')
-        a.brand-logo(href='/home2', style='padding-left:30px;') MapOurTours
+          img.circle.responsive-img(src='images/finalprojecticon1.png', alt='MapOurTours', style='height:60px; width:60px;')
+        a.brand-logo(href='/', style='padding-left:30px;') MapOurTours
         ul#nav-mobile.right.hide-on-med-and-down
           li
             a(href='/search') Search
           li
-            a(href='profile.html') Profile
+            a(href='/profile') Profile
           li
             a(href='/logout') Log Out
     input#pac-input.controls(type='text', placeholder='Search Box')
     #map-canvas(style='width:65%; float:left')
     div(style='width:34%;float:left;')
       #bookVisit.center
+        h4 Welcome.
+        p.flow-text
+          | MapOurTours allows you to book all your college tours in one place.
+          | To get started, search by either location or by college name. Then schedule
+          | your desired date and time. Voilà!
+        a(href='/search')
+          img(src='images/finalprojecticon1.png', alt='MapOurTours', style='height:60px; width:60px;')
       #bookTime
     //
       A DB OF  COLLEGE AVAILABILITIES (TOUR TIMES) SET UP LIKE:

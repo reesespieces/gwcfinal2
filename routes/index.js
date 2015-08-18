@@ -41,6 +41,7 @@ router.post('/itinerary', function(req, res){
   //res.send(req.body)
   //req.body.email = req.user.email;
   req.body['email'] = req.user.email; //INSERTING THE EMAIL INTO THE FIELDS THAT ARE COLLECTED
+  req.body['username'] = req.user.username;
   console.log(req.body);
    MongoClient.connect(url, function(err, db) { //MONGO CLIENT IS CONNECTING TO THE URL -- TWO POSSIBLE OUTCOMES: ERROR OR THE DB
     assert.equal(null, err); //ERROR MUST BE NULL FOR THE PROGRAM TO CONTINUE

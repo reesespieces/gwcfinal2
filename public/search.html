@@ -27,11 +27,11 @@
    <!-- CREATING NAV BAR -->
    <nav>
      <div class="nav-wrapper cyan">
-       <a href="/home2" style="padding-left:30px;"><img src="images/finalprojecticon1.png" alt="backpack" style="height:60px; width:60px;" class="circle responsive-img"></a>
+       <a href="/home2" style="padding-left:30px;"><img src="images/finalprojecticon1.png" alt="MapOurTours" style="height:60px; width:60px;" class="circle responsive-img"></a>
        <a href="/" class="brand-logo" style="padding-left:30px;">MapOurTours</a>
        <ul id="nav-mobile" class="right hide-on-med-and-down">
          <li><a href="/search">Search</a></li>
-         <li><a href="profile.html">Profile</a></li>
+         <li><a href="/profile">Profile</a></li>
          <li><a href="/logout">Log Out</a></li>
        </ul>
       </div>
@@ -40,14 +40,20 @@
      <input id="pac-input" class="controls" type="text" placeholder="Search Box">
      <div style="width:65%; float:left" id="map-canvas"></div>
      <div style="width:34%;float:left;">
-       <div class="center" id="bookVisit"></div>
+       <div class="center" id="bookVisit">
+         <h4>Welcome.</h4>
+         <p class="flow-text">MapOurTours allows you to book all your college tours in one place.
+           To get started, search by either location or by college name. Then schedule
+         your desired date and time. Voilà!</p>
+         <a href="/search"><img src="images/finalprojecticon1.png" alt="MapOurTours" style="height:60px; width:60px;"></a>
+
+       </div>
        <div id="bookTime"></div>
      </div>
      <!-- A DB OF  COLLEGE AVAILABILITIES (TOUR TIMES) SET UP LIKE:
      COLLEGES = [{'NAME':'HARVARD',...,'DATES':[{DATE: '8/15/15', TIMES:[10, 11, 1]}, {'DATE':...}]}]
 
      <input type="text" id="datetimepicker"/><br><br> -->
+
  </body>
-
-
 </html>

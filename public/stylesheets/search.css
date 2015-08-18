@@ -49,4 +49,7 @@
   #target {
     width: 345px;
     }
-  
+
+  #text {
+    font-size: 20px;
+  }

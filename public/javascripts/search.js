@@ -52,7 +52,7 @@ function drawMap() { //DRAWS THE GOOGLE MAP
     for (var i = 0, place; place = places[i]; i++) {
       var image = {
         url: place.icon,
-        size: new google.maps.Size(71, 71),
+        size: new google.maps.Size(171, 171),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(17, 34),
         scaledSize: new google.maps.Size(25, 25)
@@ -72,6 +72,10 @@ function drawMap() { //DRAWS THE GOOGLE MAP
     }
 
     map.fitBounds(bounds);
+    var listener = google.maps.event.addLIstener(map, "idle", function(){
+      if (map.getZoom() > 2) map.setZoom(2);
+      google.maps.event.removeListener(listener);
+    })
   });
 
 //description of Brown marker
@@ -83,7 +87,7 @@ function drawMap() { //DRAWS THE GOOGLE MAP
     //console.log(latLong)
 
     //CREATES A VARIABLE COLLEGENAME AND SETS THE HEADER TO BE EQUAL TO THE NAME OF THE DATA ID
-    var collegeName = '<h4 class="center">' + this.name + '</h4>' + '<p class="flow-text">Book Your Tour</p>' +
+    var collegeName = '<h4 class="center">' + this.name + '</h4>' + '<p class="flow-text">Book Your Date</p>' +
     '<input id="calendar" type="text" class="center" style="width:63%;" placeholder="Pick Your Date"></input>';
 
     var tourDates = [];
@@ -152,7 +156,7 @@ function drawMap() { //DRAWS THE GOOGLE MAP
               for(var i = 0; i < tourTimes.length; i++){
                 //CHECKS TO SEE IF THE VALUE OF THE SELECTED DATE EQUALS THE VALUE OF THE DATE
                 if(new Date(selected).valueOf() == new Date(tourTimes[i].date).valueOf()){
-                  var timeVisit = '<form action="#" id="tourTimes">';
+                  var timeVisit = '<p class="center flow-text">Book Your Time</p><form action="#" id="tourTimes">';
                   timeVisit += '<input type="hidden" id="collegeName" value="' + theRealCollegeName + '">';
                   for(var j = 0; j < tourTimes[i].times.length; j++){
                     timeVisit += '<input type="radio" name="radio" value="' + tourTimes[i].times[j] + '" id="time' + tourTimes[i].times[j] + '" /><label for="time' + tourTimes[i].times[j] + '">' + tourTimes[i].times[j] + '</label><br />'
