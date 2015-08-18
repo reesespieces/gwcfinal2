@@ -3,7 +3,9 @@ html
   head
     meta(name='viewport', content='initial-scale=1.0, user-scalable=no')
     meta(charset='utf-8')
-    title= user.fullName
+    link(rel='shortcut icon', href='http://convertico.com/images/55d379bacba01/icon2.png')
+    
+    title Profile
     // Our created js and css files
     script(src='//code.jquery.com/jquery-1.10.2.js')
     script(src='/javascripts/profile.js')
@@ -24,9 +26,9 @@ html
     // CREATING NAV BAR
     nav
       .nav-wrapper.cyan
-        a(href='/home2', style='padding-left:30px;')
+        a(href='/', style='padding-left:30px;')
           img.circle.responsive-img(src='images/finalprojecticon1.png', alt='backpack', style='height:60px; width:60px;')
-        a.brand-logo(href='/home2', style='padding-left:30px;') MapOurTours
+        a.brand-logo(href='/', style='padding-left:30px;') MapOurTours
         ul#nav-mobile.right.hide-on-med-and-down
           li
             a(href='/search') Search
@@ -43,8 +45,8 @@ html
       br
       br
       img(src='/images/user.png', style='width:96px; height:96px;')
-      h5= user.fullName
-      p#emailText.flow-text= user.username
+      h5 John Doe
+      p#emailText.flow-text
       p
     div(style='width:65%;float:left;padding-left:5%;')
       br
@@ -99,4 +101,4 @@ html
     .footer-copyright
       .container
         | © 2015 Copyright MapOurTours
-        a.grey-text.text-lighten-4.right(href='/home2') Home
+        a.grey-text.text-lighten-4.right(href='/aboutUs') About Us

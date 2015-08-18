@@ -1,0 +1,77 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='initial-scale=1.0, user-scalable=no')
+    meta(charset='utf-8')
+    title Profile
+    // Our created js and css files
+    script(src='//code.jquery.com/jquery-1.10.2.js')
+    script(src='/javascripts/profile.js')
+    link(rel='stylesheet', href='/stylesheets/profile.css')
+    // Compiled and minified CSS
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css')
+    // Compiled and minified JavaScript
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js')
+    style.
+      .parallax-container {
+      height: "90px";
+      }
+    script.
+      $(document).ready(function(){
+      $('.parallax').parallax();
+      });
+  body
+    // CREATING NAV BAR
+    nav
+      .nav-wrapper.cyan
+        a(href='/', style='padding-left:30px;')
+          img.circle.responsive-img(src='images/finalprojecticon1.png', alt='backpack', style='height:60px; width:60px;')
+        a.brand-logo(href='/', style='padding-left:30px;') MapOurTours
+        ul#nav-mobile.right.hide-on-med-and-down
+          li
+            a(href='/search') Login
+    //
+      USER FIELD
+      <div style="float:left; width:33%;">
+      <p> Hello World </p>
+      </div>
+    br
+    br
+    .row.center
+      .col.l6.m6(style='padding-right:120px;')
+        img(src='/images/user.png', height='180px;', width='180px')
+        p test
+      .col.l6.m6(style='padding-left:120px;')
+        img(src='/images/user.png', height='180px;', width='180px')
+        p test
+    .row.center
+      .col.l6.m6(style='padding-right:120px;')
+        img(src='/images/user.png', height='180px;', width='180px')
+        p test
+      .col.l6.m6(style='padding-left:120px;')
+        img(src='/images/user.png', height='180px;', width='180px')
+        p test
+    // FOOTER
+    footer.page-footer.cyan
+      .container.white-text.valign
+        .row
+          .col.l3.m3
+            center
+              a.grey-text.text-lighten-3(href='https://twitter.com/MapYourTour')
+                img(style='width:32px; height:32px;', src='/images/twitter.png')
+          .col.l3.m3
+            center
+              a.grey-text.text-lighten-3(href='/')
+                img(style='width:32px; height:32px;', src='/images/fb.png')
+          .col.l3.m3
+            center
+              a.grey-text.text-lighten-3(href='https://instagram.com/mapourtours/')
+                img(style='width:32px; height:32px;', src='/images/insta.png')
+          .col.l3.m3
+            center
+              a.grey-text.text-lighten-3(href='/')
+                img(style='width:32px; height:32px;', src='/images/google.png')
+      .footer-copyright
+        .container
+          | © 2015 Copyright MapOurTours
+          a.grey-text.text-lighten-4.right(href='/aboutUs') About Us

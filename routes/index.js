@@ -62,6 +62,11 @@ router.get('/', function(req, res, next) {
   res.render('home', { title: 'Express'}); //, givenName: req.user.givenName
 });
 
+/* GET about us page. */
+router.get('/aboutUs', function(req, res, next) {
+  res.render('aboutUs', { title: 'Express'}); //, givenName: req.user.givenName
+});
+
 //ROUTE TO THE SEARCH JADE
 router.get('/search', stormpath.loginRequired, function(req, res) { //MUST BE LOGGED IN TO SEARCH
  res.render('search', { username: req.user.givenName });
