@@ -219,5 +219,5 @@ function addItinerary() {
     });
     $("#bookVisit").html('');
     $("#bookTime").html('');
-    $("#booked").html('<h4>Success!</h4>');
+    $("#booked").html('<div class="center"><p class="center flow-text">Successfully booked!' + '</br></br>' + ' Now you can go to your profile to see your itinerary!</p>' + '<a href="/profile"><img src="images/user.png" alt="MapOurTours" style="height:60px; width:60px;"></a></div>');
 };
