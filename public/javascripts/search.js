@@ -155,7 +155,7 @@ function drawMap() { //DRAWS THE GOOGLE MAP
                   var timeVisit = '<form action="#" id="tourTimes">';
                   timeVisit += '<input type="hidden" id="collegeName" value="' + theRealCollegeName + '">';
                   for(var j = 0; j < tourTimes[i].times.length; j++){
-                    timeVisit += '<input type="radio" name="radio" value="' + tourTimes[i].times[j] + '" id="time' + tourTimes[i].times[j] + '" /><label for="time' + tourTimes[i].times[j] + '">' + + tourTimes[i].times[j] + '</label><br />'
+                    timeVisit += '<input type="radio" name="radio" value="' + tourTimes[i].times[j] + '" id="time' + tourTimes[i].times[j] + '" /><label for="time' + tourTimes[i].times[j] + '">' + tourTimes[i].times[j] + '</label><br />'
                     console.log("Time Visit :", timeVisit);
                   }
                   timeVisit += '</form>';
