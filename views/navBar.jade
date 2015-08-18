@@ -1,0 +1,24 @@
+// CREATING NAV BAR
+if user
+  nav
+    .nav-wrapper.cyan
+      a(href='/', style='padding-left:30px;')
+        img.circle.responsive-img(src='images/finalprojecticon1.png', alt='backpack', style='height:60px; width:60px;')
+      a.brand-logo(href='/', style='padding-left:30px;') MapOurTours
+      ul#nav-mobile.right.hide-on-med-and-down
+        li
+          a(href='/search') Search
+        li
+          a(href='/profile') #{user.givenName}'s Profile
+        li
+          a(href='/logout') Log Out
+
+else
+  nav
+    .nav-wrapper.cyan
+      a(href='/', style='padding-left:30px;')
+        img.circle.responsive-img(src='images/finalprojecticon1.png', alt='backpack', style='height:60px; width:60px;')
+      a.brand-logo(href='/', style='padding-left:30px;') MapOurTours
+      ul#nav-mobile.right.hide-on-med-and-down
+        li
+          a(href='/search') Log In

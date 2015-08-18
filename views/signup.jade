@@ -119,26 +119,4 @@ html
       button#btnSubmit.waves-effect.waves-light.btn(onclick='validate()', type='sumbit') Submit
     br
   // FOOTER
-  footer.page-footer.cyan
-    .container.white-text.valign
-      .row
-        .col.l3.m3
-          center
-            a.grey-text.text-lighten-3(href='https://twitter.com/MapYourTour')
-              img(style='width:32px; height:32px;', src='/images/twitter.png')
-        .col.l3.m3
-          center
-            a.grey-text.text-lighten-3(href='/')
-              img(style='width:32px; height:32px;', src='/images/fb.png')
-        .col.l3.m3
-          center
-            a.grey-text.text-lighten-3(href='https://instagram.com/mapourtours/')
-              img(style='width:32px; height:32px;', src='/images/insta.png')
-        .col.l3.m3
-          center
-            a.grey-text.text-lighten-3(href='/')
-              img(style='width:32px; height:32px;', src='/images/google.png')
-    .footer-copyright
-      .container
-        | © 2015 Copyright MapOurTours
-        a.grey-text.text-lighten-4.right(href='/') Home
+  include footer.jade
