@@ -39,7 +39,7 @@ router.get('/itinerary', stormpath.loginRequired, function(req, res) { //RETURN 
 router.post('/itinerary', function(req, res){
   //console.log(req.body);
   //res.send(req.body)
-  //req.body.email = req.user.email;
+  //req.body['fullName'] = req.user.fullName;
   req.body['email'] = req.user.email; //INSERTING THE EMAIL INTO THE FIELDS THAT ARE COLLECTED
   req.body['username'] = req.user.username;
   console.log(req.body);
