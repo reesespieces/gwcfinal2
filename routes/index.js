@@ -29,7 +29,7 @@ function insertDocument(db, record, callback) { //FUNCTION DEFINITION TAKES A DB
 router.get('/itinerary', stormpath.loginRequired, function(req, res) { //RETURN JSON OF INTINERARIES
    var db = req.dbgwc; //ADDS THIS DB TO ALL THE INCOMING REQUEST OBJECTS
    var collection = db.get('itinerary');
-   collection.find({ "email": req.user.email },{},function(e,docs){ //GRABS THE COLLECTION
+   collection.find({ "email": req.user.email }, {sort: {"date":1}},function(e,docs){ //GRABS THE COLLECTION
        res.json(docs);
        //THIS IS ROOM FOR POTENTIAL CODE LIKE SORTING BY DATE
    });

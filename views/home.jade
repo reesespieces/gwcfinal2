@@ -31,9 +31,10 @@ html
       p.center.flow-text.white-text(style='text-shadow: 2px 2px 8px #000; font-size:27px;')
         b Simplifying the process of planning a college visit
     // SIGN UP
-    br
-    .center
-      a.waves-effect.waves-light.btn(href='/register') Sign Up
+    if !user
+      br
+      .center
+        a.waves-effect.waves-light.btn(href='/register') Sign Up
     .container
       .section
         // Icon Section
@@ -75,25 +76,25 @@ html
               p.light
                 b Hannah Lerner, MASSACHUSETTS
               p.light
-                | She is a rising junior at Boston University Academy. Besides coding, she likes
-                | to fence and competes in the Cyber Patriots competition.
+                | Hannah is a rising junior at Boston University Academy. Besides coding, she likes
+                | to fence and compete in CyberPatriot competitions.
               p
               p.light
                 b Maddie Comtois, TEXAS
               p.light
-                | She is a rising junior at All Saints' Episcopal school. Besides programming,
+                | Maddie is a rising junior at All Saints' Episcopal School. Besides programming,
                 | she likes to study foreign languages and make movies.
               p
               p.light
                 b Maddie Dick, CONNECTICUT
               p.light
-                | She is a rising senior at Staples High School. Besides programming, she
+                | Maddie is a rising senior at Staples High School. Besides programming, she
                 | enjoys creative activites, like photography and making movies.
               p
               p.light
                 b Nora Mitchell, NEW YORK
               p.light
-                | She is a rising senior at Clarkstown North High School. Besides coding,
+                | Nora is a rising senior at Clarkstown North High School. Besides coding,
                 | she likes drawing and writing.
               p
     center

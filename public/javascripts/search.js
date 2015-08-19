@@ -128,6 +128,7 @@ function drawMap() { //DRAWS THE GOOGLE MAP
     //var calendar = $(function() {$( "#calendar" ).datepicker();});
     google.maps.event.addListener(marker, 'click', function() { //WHEN THE MARKER IS CLICKED, THEN DISPLAY THE INFO WINDOW
         $("#bookTime").html(''); //GRABS THE DIV WITH ID OF BOOKTIME AND SETS THE HTML TO '' AKA CLEARS IT
+        $('#booked').html('');
         InfoWindow.close();
         InfoWindow.setContent(contentString);
         InfoWindow.open(map,marker);
